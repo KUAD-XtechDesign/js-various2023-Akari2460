@@ -31,4 +31,3 @@
   function foodAnime(){
     $("#food").addClass("anime")
   }
-

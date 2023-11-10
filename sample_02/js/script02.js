@@ -14,7 +14,7 @@
     scrollTop = $(this).scrollTop()//何ピクセルスクロールしたか
     scrollRatio = scrollTop/(documentH-windowH)//どれくらいスクロールされたか0から1
     
-    separate = documentH / 3//内容の高さを3分割した数値
+    separate = documentH / 8//内容の高さを3分割した数値
 
     //３分割した数値とどれだけスクロールしたかを比較→bodyにクラスをつける。あとはCSSファイルでデザイン変更
     if(scrollTop < separate){
@@ -22,7 +22,7 @@
     }else if(scrollTop < separate * 2){
       $("body").removeClass().addClass("two")
     }else{
-      $("body").removeClass().addClass("three")
+      $("body").removeClass().addClass("nane")
     }
 
     console.log(windowH,documentH,scrollTop)
@@ -35,16 +35,39 @@
 
   //Menuボタンを押した時
   $("#btn01").on("click",function(){
-    $("html, body").animate({scrollTop:0}, 1000, "swing");
+    $("html, body").animate({scrollTop:0}, 500, "swing");
   })
 
   $("#btn02").on("click",function(){
-    $("html, body").animate({scrollTop:separate*1}, 1000, "swing");
+    $("html, body").animate({scrollTop:separate*0.9}, 500, "swing");
   })
 
   $("#btn03").on("click",function(){
-    $("html, body").animate({scrollTop:separate*2}, 1000, "swing");
+    $("html, body").animate({scrollTop:separate*2.9}, 500, "swing");
   })
 
 
+  $("#btn04").on("click",function(){
+    $("html, body").animate({scrollTop:separate*3}, 500, "swing");
+  })
+
+  $("#btn05").on("click",function(){
+    $("html, body").animate({scrollTop:separate*4}, 500, "swing");
+  })
+
+  $("#btn06").on("click",function(){
+    $("html, body").animate({scrollTop:separate*5}, 500, "swing");
+  })
+
+  $("#btn07").on("click",function(){
+    $("html, body").animate({scrollTop:separate*6}, 500, "swing");
+  })
+
+  $("#btn08").on("click",function(){
+    $("html, body").animate({scrollTop:separate*7}, 500, "swing");
+  })
+
+  
+
+  AOS.init();
 
